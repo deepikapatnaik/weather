@@ -91,3 +91,43 @@ body{
     margin-top: 10px;
     display: none;
 }
+.detail_1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.speed, .pressure{
+    font-size: 20px;
+    margin-top: -6px;
+}
+.detail_0{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.sunrise, .sunset{
+    font-size: 28px;
+    margin-top: -6px;
+}

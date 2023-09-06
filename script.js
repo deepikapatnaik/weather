@@ -14,11 +14,22 @@ async function checkWeather(city) {
             }
             else {
             var data = await response.json();
+            //console.log(data);
+            let unix_1=data.sys.sunrise;
+            var time_1=new Date(unix_1*1000).toLocaleTimeString('it-IT');
+            time_1=time_1.slice(0,5);
+            let unix_2=data.sys.sunset;
+            var time_2=new Date(unix_2*1000).toLocaleTimeString('it-IT');
+            time_2=time_2.slice(0,5);
 
             document.querySelector(".city").innerHTML = data.name;
             document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
             document.querySelector(".humidity").innerHTML = data.main.humidity  + "%";
-            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+            document.querySelector(".wind").innerHTML = Math.round(data.main.feels_like) + "°C";
+            document.querySelector(".speed").innerHTML = data.wind.speed + " m/s";
+            document.querySelector(".pressure").innerHTML = data.main.pressure + " hPa";
+            document.querySelector(".sunrise").innerHTML = time_1;
+            document.querySelector(".sunset").innerHTML = time_2;
 
             if(data.weather[0].main == "Clouds") {
                 weather_icons.src = "images/clouds.png";
