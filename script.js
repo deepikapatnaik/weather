@@ -43,8 +43,14 @@ async function checkWeather(city) {
             else if(data.weather[0].main == "Drizzle") {
                 weather_icons.src = "images/drizzle.png";
             }
-            else if(data.weather[0].main == "Mist") {
+            else if(data.weather[0].main == "Mist" || data.weather[0].main == "Fog") {
                 weather_icons.src = "images/mist.png";
+            }
+            else if(data.weather[0].main == "Thunderstorm") {
+                weather_icons.src = "images/thunderstorm.png";
+            }
+            else if(data.weather[0].main == "Snow") {
+                weather_icons.src = "images/snow.png";
             }
 
             document.querySelector(".weather").style.display = "block";
